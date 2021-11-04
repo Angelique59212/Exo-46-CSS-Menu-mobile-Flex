@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.inline {
+    display: inline-block;
+    padding: 0.8rem;
+    font-size: 1.6rem;
+    margin: 1rem;
+}
+
+a {
+    text-decoration-line: none;
+    color: black;
+    font-weight: bold;
+}
+
+header {
+    text-align: right;
+}
+
+.menu > i:first-child{
+    display: none;
+}
+
+.menu {
+    width: 100%;
+    position: fixed;
+    background-color: lightpink;
+    display: flex;
+    flex-direction: row;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: deepskyblue;
+}
+
+.inline:hover .submenu {
+    display: block;
+}
+
+.submenu > a {
+    display: block;
+    padding: 5px;
+}
+
+.submenu > a:hover {
+    color: lightpink;
+}
+
+@media screen and (max-width: 688px) {
+    .menu > .inline {
+        display: none;
+    }
+
+    .menu > i:first-child {
+        display: block;
+        padding: 1.2rem;
+        text-align: left;
+    }
+
+    .menu:hover .inline {
+        display: block;
+        text-align: left;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+}
